@@ -1,0 +1,7 @@
+.align-center{
+    text-align: center;
+}
+th,td{
+    border-style: solid;
+    border-color: #96D4D4;
+}

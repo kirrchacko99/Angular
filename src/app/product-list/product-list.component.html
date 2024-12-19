@@ -1,0 +1,41 @@
+<div>
+    <div class="align-center"> 
+        <h2>Prodct List --{{userName}} {{age}}</h2>
+    </div>
+    <div>
+        Search Item: <input (keyup)="searchNameChange()" type="text"[(ngModel)]="searchName"> <button (click)="calculateTotalPrice()">Total Price</button>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Date of Menu</th>
+                <th>Price</th>
+                <th>Expirt Date</th>
+                <th>Description</th>
+            </tr>
+            <tr *ngFor="let product of products; let i=index;">
+                <td>
+                   {{product.name}}
+                </td>
+                <td>
+                   {{product.price}}
+                </td>
+                <td>
+                    {{product. dateofmanufacture}}
+                </td>
+                <td>
+                    {{product.expiryDate}}
+
+                </td>
+                <td>
+                    {{product. description}}
+            </td> 
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td>{{totalPrice}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
